@@ -1,3 +1,4 @@
+import 'package:adv_basics/data/questions.dart';
 import 'package:adv_basics/widgets/answer_button.dart';
 import 'package:flutter/material.dart';
 
@@ -11,24 +12,31 @@ class QuestionsScreen extends StatefulWidget {
 class _QuestionsScreenState extends State<QuestionsScreen> {
   @override
   Widget build(BuildContext context) {
+    final currentQuestion = questions[1];
+
     return Center(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 32),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Text(
-              "What are the main building blocks of flutter UIs?",
+            Text(
+              currentQuestion.text,
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.white70,
                 fontSize: 24,
               ),
             ),
             const SizedBox(height: 24),
-            AnswerButton("Answer 1", () {}),
-            AnswerButton("Answer 2", () {}),
-            AnswerButton("Answer 3", () {}),
+            ...currentQuestion.answers.map(
+              (answer) {
+                return AnswerButton(
+                  answerText: answer,
+                  onTap: () {},
+                );
+              },
+            ),
           ],
         ),
       ),
