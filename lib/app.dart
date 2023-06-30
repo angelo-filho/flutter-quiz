@@ -1,3 +1,4 @@
+import 'package:adv_basics/screens/questions_screen.dart';
 import 'package:adv_basics/screens/start_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
               end: Alignment.bottomRight,
             ),
           ),
-          child: const StartScreen(),
+          child: const QuestionsScreen(),
         ),
       ),
     );
