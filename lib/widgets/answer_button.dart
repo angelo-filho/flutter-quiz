@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class AnswerButton extends StatelessWidget {
-  const AnswerButton(this.answerText, this.onTap, {super.key});
+  const AnswerButton({
+    super.key,
+    required this.answerText,
+    required this.onTap,
+  });
 
   final String answerText;
   final void Function() onTap;
@@ -13,11 +17,12 @@ class AnswerButton extends StatelessWidget {
       child: FilledButton(
         onPressed: onTap,
         style: FilledButton.styleFrom(
+          padding: const EdgeInsets.symmetric(horizontal: 40),
           minimumSize: const Size.fromHeight(48),
           backgroundColor: const Color.fromARGB(255, 33, 1, 95),
           foregroundColor: Colors.white,
         ),
-        child: Text(answerText),
+        child: Text(answerText, textAlign: TextAlign.center),
       ),
     );
   }
