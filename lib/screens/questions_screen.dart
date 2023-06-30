@@ -12,7 +12,9 @@ class QuestionsScreen extends StatefulWidget {
 class _QuestionsScreenState extends State<QuestionsScreen> {
   @override
   Widget build(BuildContext context) {
-    final currentQuestion = questions[1];
+    final currentQuestion = questions[0];
+
+    final shuffledAnswers = currentQuestion.getShuffledAnswers();
 
     return Center(
       child: Padding(
@@ -29,7 +31,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
               ),
             ),
             const SizedBox(height: 24),
-            ...currentQuestion.answers.map(
+            ...shuffledAnswers.map(
               (answer) {
                 return AnswerButton(
                   answerText: answer,
