@@ -10,8 +10,22 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  var activeScreen = 'start-screen';
+
+  void switchScreen() {
+    setState(() {
+      activeScreen = 'questions-screen';
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
+    Widget screenWidget = StartScreen(switchScreen);
+
+    if (activeScreen == 'questions-screen') {
+      screenWidget = const QuestionsScreen();
+    }
+
     return MaterialApp(
       home: Scaffold(
         body: Container(
@@ -25,7 +39,7 @@ class _MyAppState extends State<MyApp> {
               end: Alignment.bottomRight,
             ),
           ),
-          child: const QuestionsScreen(),
+          child: screenWidget,
         ),
       ),
     );
