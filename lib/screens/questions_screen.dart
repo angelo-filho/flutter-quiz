@@ -1,3 +1,4 @@
+import 'package:adv_basics/widgets/answer_button.dart';
 import 'package:flutter/material.dart';
 
 class QuestionsScreen extends StatefulWidget {
@@ -25,37 +26,9 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
               ),
             ),
             const SizedBox(height: 24),
-            FilledButton(
-              onPressed: () {},
-              style: FilledButton.styleFrom(
-                  minimumSize: const Size.fromHeight(48),
-                  backgroundColor: const Color.fromARGB(255, 37, 6, 88)),
-              child: const Text("Placeholder"),
-            ),
-            const SizedBox(height: 8),
-            FilledButton(
-              onPressed: () {},
-              style: FilledButton.styleFrom(
-                  minimumSize: const Size.fromHeight(48),
-                  backgroundColor: const Color.fromARGB(255, 37, 6, 88)),
-              child: const Text("Placeholder"),
-            ),
-            const SizedBox(height: 8),
-            FilledButton(
-              onPressed: () {},
-              style: FilledButton.styleFrom(
-                  minimumSize: const Size.fromHeight(48),
-                  backgroundColor: const Color.fromARGB(255, 37, 6, 88)),
-              child: const Text("Placeholder"),
-            ),
-            const SizedBox(height: 8),
-            FilledButton(
-              onPressed: () {},
-              style: FilledButton.styleFrom(
-                  minimumSize: const Size.fromHeight(48),
-                  backgroundColor: const Color.fromARGB(255, 37, 6, 88)),
-              child: const Text("Placeholder"),
-            ),
+            AnswerButton("Answer 1", () {}),
+            AnswerButton("Answer 2", () {}),
+            AnswerButton("Answer 3", () {}),
           ],
         ),
       ),
