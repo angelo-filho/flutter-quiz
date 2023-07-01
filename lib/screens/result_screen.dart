@@ -12,8 +12,7 @@ class ResultScreen extends StatelessWidget {
   final List<String> answers;
   final void Function() onRestartQuiz;
 
-  @override
-  Widget build(BuildContext context) {
+  int get correctAnswersAmount {
     int correctAnswersAmount = 0;
 
     for (var i = 0; i < questions.length; i++) {
@@ -24,6 +23,11 @@ class ResultScreen extends StatelessWidget {
       }
     }
 
+    return correctAnswersAmount;
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 32),
       child: Center(
