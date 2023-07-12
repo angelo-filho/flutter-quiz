@@ -18,7 +18,7 @@ Um APP de quiz para testar seus conhecimentos em Flutter. Foi o segundo APP dese
 
 <p>
   <img src="./readme_assets/quiz-app-start.jpg" alt="Screen shot do App de Quiz tela de início" title="App de Quiz tela de início" width="220px"/>
-  <img src="./readme_assets/quiz-app-question.jpg" alt="Screen shot do App de Quiz tela de início" title="App de Quiz tela de questão" width="220px"/>
+  <img src="./readme_assets/quiz-app-question.jpg" alt="Screen shot do App de Quiz tela de questão" title="App de Quiz tela de questão" width="220px"/>
   <img src="./readme_assets/quiz-app-results.jpg" alt="Screen shot do App de Quiz tela de resultados" title="App de Quiz tela de resultados" width="220px"/>
   
 </p>
@@ -35,10 +35,10 @@ Para rodar o projeto, você precisa ter em sua máquina a seguinte ferramenta: [
 
 ```bash
 # Clone este repositório
-$ git clone https://github.com/angelo-filho/Roll-Dice.git
+$ git clone https://github.com/angelo-filho/flutter-quiz.git
 
 # Acesse a pasta do projeto
-$ cd Roll-Dice
+$ cd flutter-quiz
 ```
 
 - Instale as dependências e então inicialize o projeto
